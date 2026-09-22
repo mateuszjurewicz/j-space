@@ -17,6 +17,7 @@
 - [A Global Workspace in Language Models (The J-space)](#a-global-workspace-in-language-models-the-j-space)
   - [Table of Contents](#table-of-contents)
 - [Own Notes](#own-notes)
+  - [](#)
 - [AI-assisted Notes](#ai-assisted-notes)
   - [Core Finding](#core-finding)
   - [Five Functional Properties (GWT signatures)](#five-functional-properties-gwt-signatures)
@@ -61,6 +62,7 @@
 
 `CONTINUE AT IMAGE FOR FUNCTIONAL ROLES...`
 
+<test>
 ---
 # AI-assisted Notes
 
