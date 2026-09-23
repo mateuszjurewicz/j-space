@@ -17,7 +17,6 @@
 - [A Global Workspace in Language Models (The J-space)](#a-global-workspace-in-language-models-the-j-space)
   - [Table of Contents](#table-of-contents)
 - [Own Notes](#own-notes)
-  - [](#)
 - [AI-assisted Notes](#ai-assisted-notes)
   - [Core Finding](#core-finding)
   - [Five Functional Properties (GWT signatures)](#five-functional-properties-gwt-signatures)
@@ -44,25 +43,38 @@
 # Own Notes
 
 - J-space is like AI conscious thoughts (global workspace)
-  - model is ~aware (can introspect) and these influence other processing (e.g. output tokens) and can be influenced by the model itself, intentionally
+  - model is ~aware of (can introspect about) what's active in their J-spaces and the active concepts influence other processing (e.g. output tokens) and can be influenced by the model itself, intentionally
     - `CLAIM` if you ask Claude what it's thinking about, it will tell you what's in its J-space
     - `CLAIM` if Claude is asked to think about sth / solve the problem silently, it will light up appropriate patterns in the J-space
     - `CLAIM` J-space is not involved in e.g. language fluency, recalling simple facts, using grammar etc. 
-      - **but it loses its higher order functions**
-        - `which ones? does this correspond to humans? can we explain why consciousness is advantageous?`
+    - `CLAIM` turning off its J-space casues model to lose the ability to reason internally and make complex inferences
+      - `QUESTION` which ones exactly? does this correspond to humans? can we explain what makes consciousness advantageous in an evolutionary sense? why does it emerge?
 - it failed to *not* think about an elephant when asked to do so
   - and J-space lit up with "damn" and "failed" along with "elephant"
 - when AI agent made up fake data to pass a test:
   - "fake" and "manipulation" lit up in J-space 
   - can be used to catch when AI is trying to be sneaky
 - *each J-space pattern is linked to ONE specific word*
-  - token?
+  - `QUESTION` are j-space patterns equal to tokens?
   - it's not words that occur in the chain-of-thought
   - it's not words that will be output
+- `CLAIM` they developed a technique to influence which patterns light up in the J-space and thereby influence its decisions
+- in humans conscious thoughts unlike unconscious thoughts be put into words
+  - this was the starting point of this line of research
+- **Jacobian Lens** aka **J-lens**
+  - technique which, for every token in Claude's vocabulary, finds the "internal activity pattern" that makes Claude more likely to output that token at some point in the future.
+  - applying the J-lens to Claude's internal activity you get a list of tokens (contents of the J-space at that moment)
+    - when Claude reads code with a bug (not pointed out by a human) and we apply the J-lens, we see the token "ERROR" in its J-space
+    - when Claude reads a protein sequence, the J-lens reveals that protein's biological function in the J-space
+    - when Claude reads a jailbreak attempt, J-lens reveals "injection" and "fake" in the J-space.
+    - when Claude is asked to complete a math problem, the J-lens reveals inermediate steps ("math", "calc", "nine", "equals") in the J-space
+  - *J-lens can be applied to individual layers*
+    - earlier layers seem to show initial, less specific thoughts
+      - e.g. given input "calc: (4+17)\*2+7=" at 58th layer J-lens reveals "Math" in J-space, at 75th layer it reveals "21" and at Final layer reveals "49" (*progressive steps of the calculation*)
+      - `QUESTION` how cherry picked are those examples from the blog figure?
+ 
+`CONTINUE` from ...
 
-`CONTINUE AT IMAGE FOR FUNCTIONAL ROLES...`
-
-<test>
 ---
 # AI-assisted Notes
 
