@@ -73,7 +73,7 @@
       - e.g. given input "calc: (4+17)\*2+7=" at 58th layer J-lens reveals "Math" in J-space, at 75th layer it reveals "21" and at Final layer reveals "49" (*progressive steps of the calculation*)
       - `QUESTION` how cherry picked are those examples from the blog figure?
  
-`CONTINUE` from ...
+`CONTINUE` from Claude reports what’s in its J-space
 
 ---
 # AI-assisted Notes
