@@ -59,7 +59,8 @@
   - it's not words that occur in the chain-of-thought
   - it's not words that will be output
 - `CLAIM` they developed a technique to influence which patterns light up in the J-space and thereby influence its decisions
-- in humans conscious thoughts unlike unconscious thoughts be put into words
+  - Example from fig "The model reports what's in its J-space": they can *inject* a pattern (single token) into the model's J-space and ask it if it detects and injected thought and it correctly identifies what was injected (e.g. the word "lightning")
+- in humans conscious thoughts unlike unconscious thoughts can be put into words
   - this was the starting point of this line of research
 - **Jacobian Lens** aka **J-lens**
   - technique which, for every token in Claude's vocabulary, finds the "internal activity pattern" that makes Claude more likely to output that token at some point in the future.
@@ -72,6 +73,7 @@
     - earlier layers seem to show initial, less specific thoughts
       - e.g. given input "calc: (4+17)\*2+7=" at 58th layer J-lens reveals "Math" in J-space, at 75th layer it reveals "21" and at Final layer reveals "49" (*progressive steps of the calculation*)
       - `QUESTION` how cherry picked are those examples from the blog figure?
+  - `
  
 `CONTINUE` from Claude reports what’s in its J-space
 
