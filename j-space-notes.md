@@ -17,6 +17,9 @@
 - [A Global Workspace in Language Models (The J-space)](#a-global-workspace-in-language-models-the-j-space)
   - [Table of Contents](#table-of-contents)
 - [Own Notes](#own-notes)
+  - [Claims](#claims)
+  - [Questions](#questions)
+  - [General Notes](#general-notes)
 - [AI-assisted Notes](#ai-assisted-notes)
   - [Core Finding](#core-finding)
   - [Five Functional Properties (GWT signatures)](#five-functional-properties-gwt-signatures)
@@ -42,23 +45,65 @@
 ---
 # Own Notes
 
-- J-space is like AI conscious thoughts (global workspace)
-  - model is ~aware of (can introspect about) what's active in their J-spaces and the active concepts influence other processing (e.g. output tokens) and can be influenced by the model itself, intentionally
-    - `CLAIM` if you ask Claude what it's thinking about, it will tell you what's in its J-space
-    - `CLAIM` if Claude is asked to think about sth / solve the problem silently, it will light up appropriate patterns in the J-space
-    - `CLAIM` J-space is not involved in e.g. language fluency, recalling simple facts, using grammar etc. 
-    - `CLAIM` turning off its J-space casues model to lose the ability to reason internally and make complex inferences
-      - `QUESTION` which ones exactly? does this correspond to humans? can we explain what makes consciousness advantageous in an evolutionary sense? why does it emerge?
+J-space is like AI conscious thoughts (global workspace).
+
+Model is ~aware of (can introspect about) what's active in their J-spaces and the active concepts influence other processing (e.g. output tokens) and can be influenced by the model itself, intentionally.
+
+## Claims
+- `CLAIM #1` **Model reports what's in its J-space**
+  -  if you ask Claude what it's thinking about, it will tell you what's in its J-space (even injected things)
+- `CLAIM #2` **Model can silently activate concepts in its J-space**
+  - if Claude is asked to think about sth / solve the problem silently, it will light up appropriate patterns in the J-space, without them appearing in the output
+    - Claude can intentionally control what will ligth up in its J-space by being asked to "concentrate" on sth
+    - for example, when asked to concentrate on citrus fruits *while copying an unrelated sentence*, J-space patterns for "orange", "fruits", "thinking" and "imagery" light up whilst there's nothing in the model output about this (it just outputs the sentence we asked it to copy)
+    - **BUT** it's control over its own J-space is imperfect; when asked not to think about e.g. pink elephants, it still lights up in its J-space (along with "damn" and "failure") *less* than when asked to concentrate on them, but *more* than when they're not mentioned
+- `CLAIM #3` **J-space is not involved in things humans do subconsciously**
+  - *things that still work with turned-off J-space:*
+    - language fluency, recalling simple facts, using grammar, classify sentiment, pull facts out of passages, *answer multiple-choice questions* (why school tests don't encourage thinking?)
+      - they tested it in a funny way, they showed Claude a passage written in Spanish and asked it to: continue the passage, name the language, answer questions about e.g. a famous author who wrote in that language
+      - then they turned off Spanish in the J-space and turned on French
+      - as a result, some of the tasks are affected and some seem to bypass the J-space
+      - specifically the named language changes to French and the author from Garcia Marquez to Victor Hugo **but** the paragraph is continued in Spanish! (so language generation fluency is not mediated by J-space in this way) -> just like how humans can speak grammatically all day without thinking about grammaer
+  - the models automatic processing skips the J-space
+  - humans don't deliberately think about parsing grammar while reading or balacing our body while walking, these are not conscious
+  - most of Claude's processing doesn't involve the J-space
+  - *J-space holds only a few dozen concepts at a time*
+  - *J-space accounts for less than 10% of overall activity*
+- `CLAIM #4` **Turning off its J-space casues model to lose the ability to reason internally and make complex inferences**
+  - *things that do NOT work with turned-off J-space:*
+    - multi-step reasoning, summarization, writing rhyming poetry
+  - look at claim 3 for how it was tested
+- `CLAIM #5` **J-space causally influences model output** 
+  - they developed a technique to influence which patterns light up in the J-space and thereby influence its decisions (both turn them on and off)
+  - e.g. they ask it to finish the sentence "Fact: the number of legs on the animal that spins webs is ..." but then turn down "spider" in J-space and turn up "ant" and get Claude to answer 6 instead of 8
+  - similarly they can change the word used to complete a rhyme
+- `CLAIM #6` **A single concept active in J-space is used by many downstream processes (like conscious thoughts in Global Workspace Theory)**
+  - i.e. conscious thoughts influence many different mental processes
+  - tested by showing that turning off France and turning on China in J-space when asked "What is the capital, contient, currency and language of France?" results in output "Beijing, Asia, Yuan & Chinese".
+  - a single swap redirects 4 different mental processes
+- `CLAIM #7` **J-space patterns connect more densely to the rest of the NN than other NN activity patterns**
+  - they claim that J-space patterns are tied especially densely to other parts of the neural network
+  - that many parts of the network read info from a specific NN activity pattern and write to it. J-space patterns stand out as sometimes having 100x more NN components reading from them and writing to them.
+
+
+## Questions
+- `QUESTION #1` regarding **Claim #4** - which abilities exactly does the model lose when J-space is turned off? They claim the lost abilities are (1) internal reasoning (2) complex inferences. 
+- `QUESTION #2` Does this loss of higher cognitive functions correspond to why humans evolved consciousness? Can we explain what makes consciousness advantageous in an evolutionary sense? why does it emerge?
+- `QUESTION #3` Are J-Space patterns equal to vocabulary tokens?
+- `QUESTION #4` How exactly does the technique for turning J-space patterns on and off work?
+
+## General Notes
+
 - it failed to *not* think about an elephant when asked to do so
   - and J-space lit up with "damn" and "failed" along with "elephant"
 - when AI agent made up fake data to pass a test:
   - "fake" and "manipulation" lit up in J-space 
   - can be used to catch when AI is trying to be sneaky
 - *each J-space pattern is linked to ONE specific word*
-  - `QUESTION` are j-space patterns equal to tokens?
+  - **QUESTION #3** are j-space patterns equal to tokens?
   - it's not words that occur in the chain-of-thought
   - it's not words that will be output
-- `CLAIM` they developed a technique to influence which patterns light up in the J-space and thereby influence its decisions
+- **CLAIM #5** they developed a technique to influence which patterns light up in the J-space and thereby influence its decisions
   - Example from fig "The model reports what's in its J-space": they can *inject* a pattern (single token) into the model's J-space and ask it if it detects and injected thought and it correctly identifies what was injected (e.g. the word "lightning")
 - in humans conscious thoughts unlike unconscious thoughts can be put into words
   - this was the starting point of this line of research
@@ -72,10 +117,8 @@
   - *J-lens can be applied to individual layers*
     - earlier layers seem to show initial, less specific thoughts
       - e.g. given input "calc: (4+17)\*2+7=" at 58th layer J-lens reveals "Math" in J-space, at 75th layer it reveals "21" and at Final layer reveals "49" (*progressive steps of the calculation*)
-      - `QUESTION` how cherry picked are those examples from the blog figure?
-  - `
  
-`CONTINUE` from Claude reports what’s in its J-space
+`CONTINUE` from "Monitoring Claude’s thoughts for misbehavior"
 
 ---
 # AI-assisted Notes
