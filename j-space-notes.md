@@ -53,6 +53,7 @@
 - [ ] try to answers own [Questions](#questions)
 - [ ] make marimo demo notebook / presentation from notes
 - [ ] present somewhere > reading group, PyData
+- [ ] publish research towards Global NASA For Safe & Broadly Beneficial AI
 
 ---
 # Own Notes
