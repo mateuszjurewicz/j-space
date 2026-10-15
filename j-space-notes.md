@@ -51,10 +51,10 @@ Model is ~aware of (can introspect about) what's active in their J-spaces and th
 
 ## Claims
 - `CLAIM #1` **Model reports what's in its J-space**
-  -  if you ask Claude what it's thinking about, it will tell you what's in its J-space (even injected things)
+  - if you ask Claude what it's thinking about, it will tell you what's in its J-space (even injected things)
 - `CLAIM #2` **Model can silently activate concepts in its J-space**
   - if Claude is asked to think about sth / solve the problem silently, it will light up appropriate patterns in the J-space, without them appearing in the output
-    - Claude can intentionally control what will ligth up in its J-space by being asked to "concentrate" on sth
+    - Claude can intentionally control what will light up in its J-space by being asked to "concentrate" on sth
     - for example, when asked to concentrate on citrus fruits *while copying an unrelated sentence*, J-space patterns for "orange", "fruits", "thinking" and "imagery" light up whilst there's nothing in the model output about this (it just outputs the sentence we asked it to copy)
     - **BUT** it's control over its own J-space is imperfect; when asked not to think about e.g. pink elephants, it still lights up in its J-space (along with "damn" and "failure") *less* than when asked to concentrate on them, but *more* than when they're not mentioned
 - `CLAIM #3` **J-space is not involved in things humans do subconsciously**
