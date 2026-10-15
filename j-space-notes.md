@@ -45,11 +45,11 @@
 
 ---
 # Roadmap
-- [ ] read and take notes from [main article](https://www.anthropic.com/research/global-workspace)
-- [ ] read and take notes from [main paper](https://transformer-circuits.pub/2026/workspace/index.html?controls_id=ed90735a-968b-487a-b4f6-e2074c7a3143)
+- [x] read and take notes from [main article](https://www.anthropic.com/research/global-workspace)
+- [ ] `read and take notes from [main paper](https://transformer-circuits.pub/2026/workspace/index.html?controls_id=ed90735a-968b-487a-b4f6-e2074c7a3143)`
 - [ ] play with [Jacobian lens demo](https://www.neuronpedia.org/qwen3.6-27b/jlens?shareId=cmr1vpdne000kpt2x53dc7kqe)
 - [ ] look at [code for J-lens](https://github.com/anthropics/jacobian-lens), potentially run locally?
-- [ ] look at [commentary](https://www-cdn.anthropic.com/files/4zrzovbb/website/cc4be2488d65e54a6ed06492f8968398ddc18ebe.pdf)
+- [ ] look at [commentary](https://www-cdn.anthropic.com/files/4zrzovbb/website/cc4be2488d65e54a6ed06492f8968398ddc18ebe.pdf) by Stanislas Dehaene and Lionel Naccache & more
 - [ ] try to answers own [Questions](#questions)
 - [ ] make marimo demo notebook / presentation from notes
 - [ ] present somewhere > reading group, PyData
@@ -106,13 +106,15 @@ Model is ~aware of (can introspect about) what's active in their J-spaces and th
 
 
 ## Questions
-- `QUESTION #1` regarding **Claim #4** - which abilities exactly does the model lose when J-space is turned off? They claim the lost abilities are (1) internal reasoning (2) complex inferences. 
-- `QUESTION #2` Does this loss of higher cognitive functions correspond to why humans evolved consciousness? Can we explain what makes consciousness advantageous in an evolutionary sense? why does it emerge?
-- `QUESTION #3` Are J-Space patterns equal to vocabulary tokens?
-- `QUESTION #4` How exactly does the technique for turning J-space patterns on and off work?
-- `QUESTION #5` How is **Claim #7** measured exactly?
-- `QUESTION #6`: Could you train a model organism (intentionally misaligned LLM) to occlude its J-space, i.e. tell it to "think about being honest, helpful and harmless" at all times?
-- `QUESTION #7` What is **counterfactual reflection training**? They claim they used it to train the model to light up J-space patterns for "honesty" and "integrity" and this lowered dishonesty scores.
+- [ ] `QUESTION #1` regarding **Claim #4** - which abilities exactly does the model lose when J-space is turned off? They claim the lost abilities are (1) internal reasoning (2) complex inferences. 
+- [ ] `QUESTION #2` Does this loss of higher cognitive functions correspond to why humans evolved consciousness? Can we explain what makes consciousness advantageous in an evolutionary sense? why does it emerge?
+  - *Why is consciousness a useful way to organize computation?* (since it emerges)
+- [x] `QUESTION #3` Are J-Space patterns equal to vocabulary tokens?
+  - yes, it's a noted limitation of initial work
+- [ ] `QUESTION #4` How exactly does the technique for turning J-space patterns on and off work?
+- [ ] `QUESTION #5` How is **Claim #7** measured exactly?
+- [ ] `QUESTION #6`: Could you train a model organism (intentionally misaligned LLM) to occlude its J-space, i.e. tell it to "think about being honest, helpful and harmless" at all times?
+- [ ] `QUESTION #7` What is **counterfactual reflection training**? They claim they used it to train the model to light up J-space patterns for "honesty" and "integrity" and this lowered dishonesty scores.
  
 
 ## General Notes
@@ -161,9 +163,16 @@ Model is ~aware of (can introspect about) what's active in their J-spaces and th
   - if a model reads about a user being unaware that they took a dangerous dose of a medicine, the Pretrained Model's J-space patterns light up in relation to modelling the user while it's reading the user's message. Only when the Pretrained Model begins to output its response do J-space patterns like "WARNING" and "dangerous" light up.
   - in Post-trained Model the J-space lights up with "WARNING" and "dangerous" *while reading the user's message*.
   - so Pretrained Model's J-space models the user, Post-trained Model's J-space models Claude himself.
+- **Phenomenal Consciousness vs Access Consciousness**
+  - Phenomenal Consciousness is having experiences, feeling things
+  - Access Consciousness is purely functional, computational, i.e. you can consciously access what is on your mind, report it, reason with it, use it to guide what you do
+  - flimsy distinction, I think, and Anthropic claims it's contested whether proof of Access Consciousness implies Phenomenal Consciousness in an entity
+  - they claim J-space shows Access Consciousness in Claude
+- **Differences between Claude's and Human's Workspace**
+  - Human consciounsess appears to be sustained by recurrent loops (signals cycling / coming in waves through the same circuits)
+  - Claude's J-space is sustained within a single pass 
+  - *"Network's depth plays the role that times plays in the brain"*
  
-`CONTINUE` from "Monitoring Claude’s thoughts for misbehavior"
-
 ---
 # AI-assisted Notes
 
