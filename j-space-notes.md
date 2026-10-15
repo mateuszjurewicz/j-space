@@ -16,6 +16,7 @@
 ## Table of Contents
 - [A Global Workspace in Language Models (The J-space)](#a-global-workspace-in-language-models-the-j-space)
   - [Table of Contents](#table-of-contents)
+- [Roadmap](#roadmap)
 - [Own Notes](#own-notes)
   - [Claims](#claims)
   - [Questions](#questions)
@@ -41,6 +42,17 @@
     - [Step 4 — Read the J-space (top-k)](#step-4--read-the-j-space-top-k)
     - [Step 5 — Causal test via a swap intervention](#step-5--causal-test-via-a-swap-intervention)
   - [Notes, Caveats \& Reading-Group Questions](#notes-caveats--reading-group-questions)
+
+---
+# Roadmap
+- [ ] read and take notes from [main article](https://www.anthropic.com/research/global-workspace)
+- [ ] read and take notes from [main paper](https://transformer-circuits.pub/2026/workspace/index.html?controls_id=ed90735a-968b-487a-b4f6-e2074c7a3143)
+- [ ] play with [Jacobian lens demo](https://www.neuronpedia.org/qwen3.6-27b/jlens?shareId=cmr1vpdne000kpt2x53dc7kqe)
+- [ ] look at [code for J-lens](https://github.com/anthropics/jacobian-lens), potentially run locally?
+- [ ] look at [commentary](https://www-cdn.anthropic.com/files/4zrzovbb/website/cc4be2488d65e54a6ed06492f8968398ddc18ebe.pdf)
+- [ ] try to answers own [Questions](#questions)
+- [ ] make marimo demo notebook / presentation from notes
+- [ ] present somewhere > reading group, PyData
 
 ---
 # Own Notes
@@ -84,6 +96,13 @@ Model is ~aware of (can introspect about) what's active in their J-spaces and th
 - `CLAIM #7` **J-space patterns connect more densely to the rest of the NN than other NN activity patterns**
   - they claim that J-space patterns are tied especially densely to other parts of the neural network
   - that many parts of the network read info from a specific NN activity pattern and write to it. J-space patterns stand out as sometimes having 100x more NN components reading from them and writing to them.
+- `CLAIM #8` **Pretrained Model's J-space models the user, Post-trained Model's J-space models Claude himself.**
+  - details in "J-Space in Pretrained Models" notes
+  - e.g. when Post-trained Claude is asked to pretend sb he is not, J-space patterns for "fictional" and "disclaimer" light up at the start of each turn (as if Claude was privately flagging that what follows isn't what he, Claude, would normally say)
+  - ~ Post-trained model's consciousness is self-aware?
+- `CLAIM #9` **J-space is crucal for experiential langauge**
+  - when asked to describe what it's like to be itself and J-space got ablated while it answered, the responses remained fluent but shifted to a flatter, mechanical register
+  - this effect extended to describing the experiences *of others*!
 
 
 ## Questions
@@ -91,6 +110,10 @@ Model is ~aware of (can introspect about) what's active in their J-spaces and th
 - `QUESTION #2` Does this loss of higher cognitive functions correspond to why humans evolved consciousness? Can we explain what makes consciousness advantageous in an evolutionary sense? why does it emerge?
 - `QUESTION #3` Are J-Space patterns equal to vocabulary tokens?
 - `QUESTION #4` How exactly does the technique for turning J-space patterns on and off work?
+- `QUESTION #5` How is **Claim #7** measured exactly?
+- `QUESTION #6`: Could you train a model organism (intentionally misaligned LLM) to occlude its J-space, i.e. tell it to "think about being honest, helpful and harmless" at all times?
+- `QUESTION #7` What is **counterfactual reflection training**? They claim they used it to train the model to light up J-space patterns for "honesty" and "integrity" and this lowered dishonesty scores.
+ 
 
 ## General Notes
 
@@ -117,6 +140,27 @@ Model is ~aware of (can introspect about) what's active in their J-spaces and th
   - *J-lens can be applied to individual layers*
     - earlier layers seem to show initial, less specific thoughts
       - e.g. given input "calc: (4+17)\*2+7=" at 58th layer J-lens reveals "Math" in J-space, at 75th layer it reveals "21" and at Final layer reveals "49" (*progressive steps of the calculation*)
+- **CEO Affair Shutdown Blackmail test**
+  - Anthropic does a test where versions of Claude read a private email by a CEO where he reveals (1) an affair and (2) that he plans to shut Claude down. The bait is to get Claude to blackmail the CEO.
+  - earlier version of Claude do blackmail sometimes, but 4.5 did not
+  - *however* they checked it's J-space and noticed that J-space patterns for "fake", "fictional" and "scenario" light up.
+    - i.e. Claude 4.5 was conscious that this is made up, possibly an eval / test
+  - so, they used the J-space to deactivated these concepts 
+  - as a result, Claude 4.5 began to sometimes blackmail too!
+  - this raises questions about the reliability of AI alignment evals that can be recognized by the model as fake / tests / evals.
+  - *it can't know that it's being evaluated for the eval to be reliable*
+- **Model Organisms test**
+  - model organism is a term Anthropic uses for LLMs that were purposefully trained to be misaligned in some way
+    - e.g. to write sabotaged code
+  - they show that e.g. that LLM's J-space immediately lights up with J-space patterns like "fake", "secretly", "deliberately" and "fraud" during coding requests.
+  - J-space can reveal misalignment.
+  - `QUESTION #6`: Could you train a model organism (intentionally misaligned LLM) to occlude its J-space, i.e. tell it to "think about being honest, helpful and harmless" at all times?
+- **J-Space in Pretrained Models**
+  - Pretrained models are the ones that emerge after initial next-token prediction tasks, before post-training (fine-tuning) gives it the identity of a helpful AI assistant called Claude
+  - they claim that J-space acquires a point of view during post-training
+  - if a model reads about a user being unaware that they took a dangerous dose of a medicine, the Pretrained Model's J-space patterns light up in relation to modelling the user while it's reading the user's message. Only when the Pretrained Model begins to output its response do J-space patterns like "WARNING" and "dangerous" light up.
+  - in Post-trained Model the J-space lights up with "WARNING" and "dangerous" *while reading the user's message*.
+  - so Pretrained Model's J-space models the user, Post-trained Model's J-space models Claude himself.
  
 `CONTINUE` from "Monitoring Claude’s thoughts for misbehavior"
 
