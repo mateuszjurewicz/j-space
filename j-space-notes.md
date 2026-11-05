@@ -77,7 +77,7 @@ Model is ~aware of (can introspect about) what's active in their J-spaces and th
       - then they turned off Spanish in the J-space and turned on French
       - as a result, some of the tasks are affected and some seem to bypass the J-space
       - specifically the named language changes to French and the author from Garcia Marquez to Victor Hugo **but** the paragraph is continued in Spanish! (so language generation fluency is not mediated by J-space in this way) -> just like how humans can speak grammatically all day without thinking about grammaer
-  - the models automatic processing skips the J-space
+  - the model's automatic processing skips the J-space
   - humans don't deliberately think about parsing grammar while reading or balacing our body while walking, these are not conscious
   - most of Claude's processing doesn't involve the J-space
   - *J-space holds only a few dozen concepts at a time*
@@ -99,7 +99,7 @@ Model is ~aware of (can introspect about) what's active in their J-spaces and th
   - that many parts of the network read info from a specific NN activity pattern and write to it. J-space patterns stand out as sometimes having 100x more NN components reading from them and writing to them.
 - `CLAIM #8` **Pretrained Model's J-space models the user, Post-trained Model's J-space models Claude himself.**
   - details in "J-Space in Pretrained Models" notes
-  - e.g. when Post-trained Claude is asked to pretend sb he is not, J-space patterns for "fictional" and "disclaimer" light up at the start of each turn (as if Claude was privately flagging that what follows isn't what he, Claude, would normally say)
+  - e.g. when Post-trained Claude is asked to pretend to be sb he is not, J-space patterns for "fictional" and "disclaimer" light up at the start of each turn (as if Claude was privately flagging that what follows isn't what he, Claude, would normally say)
   - ~ Post-trained model's consciousness is self-aware?
 - `CLAIM #9` **J-space is crucal for experiential langauge**
   - when asked to describe what it's like to be itself and J-space got ablated while it answered, the responses remained fluent but shifted to a flatter, mechanical register
@@ -107,9 +107,11 @@ Model is ~aware of (can introspect about) what's active in their J-spaces and th
 
 
 ## Questions
-- [ ] `QUESTION #1` regarding **Claim #4** - which abilities exactly does the model lose when J-space is turned off? They claim the lost abilities are (1) internal reasoning (2) complex inferences. 
-- [ ] `QUESTION #2` Does this loss of higher cognitive functions correspond to why humans evolved consciousness? Can we explain what makes consciousness advantageous in an evolutionary sense? why does it emerge?
+- [x] `QUESTION #1` regarding **Claim #4** - which abilities exactly does the model lose when J-space is turned off? 
+  - They claim the lost abilities are (1) internal reasoning (2) complex inferences but also (3) having non-mechanical experiences and describing experiences of others richly (**Claim #9**)
+- [x] `QUESTION #2` Does this loss of higher cognitive functions correspond to why humans evolved consciousness? Can we explain what makes consciousness advantageous in an evolutionary sense? why does it emerge?
   - *Why is consciousness a useful way to organize computation?* (since it emerges)
+  - this is answered by **Claim #9**, in that loss of J-space makes it harder to describe the experiences of others (social adaptation!)
 - [x] `QUESTION #3` Are J-Space patterns equal to vocabulary tokens?
   - yes, it's a noted limitation of initial work
 - [ ] `QUESTION #4` How exactly does the technique for turning J-space patterns on and off work?
