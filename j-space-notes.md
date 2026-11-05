@@ -46,7 +46,8 @@
 ---
 # Roadmap
 - [x] read and take notes from [main article](https://www.anthropic.com/research/global-workspace)
-- [ ] `read and take notes from [main paper](https://transformer-circuits.pub/2026/workspace/index.html?controls_id=ed90735a-968b-487a-b4f6-e2074c7a3143)`
+- [ ] read and take notes from [main paper](https://transformer-circuits.pub/2026/workspace/index.html?controls_id=ed90735a-968b-487a-b4f6-e2074c7a3143)`
+  - [ ] `take notes in Zotero`
 - [ ] play with [Jacobian lens demo](https://www.neuronpedia.org/qwen3.6-27b/jlens?shareId=cmr1vpdne000kpt2x53dc7kqe)
 - [ ] look at [code for J-lens](https://github.com/anthropics/jacobian-lens), potentially run locally?
 - [ ] look at [commentary](https://www-cdn.anthropic.com/files/4zrzovbb/website/cc4be2488d65e54a6ed06492f8968398ddc18ebe.pdf) by Stanislas Dehaene and Lionel Naccache & more
