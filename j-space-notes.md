@@ -22,6 +22,10 @@
   - [Questions](#questions)
   - [General Notes](#general-notes)
 - [AI-assisted Notes](#ai-assisted-notes)
+  - [Key Finding](#key-finding)
+  - [Global Workspace Theory / Access Consciousness Properties](#global-workspace-theory--access-consciousness-properties)
+    - [Original Framework (Human Cognition)](#original-framework-human-cognition)
+    - [LLM Analog (Workspace-like Representations)](#llm-analog-workspace-like-representations)
   - [Core Finding](#core-finding)
   - [Five Functional Properties (GWT signatures)](#five-functional-properties-gwt-signatures)
   - [Safety Applications (the practical payoff)](#safety-applications-the-practical-payoff)
@@ -48,7 +52,7 @@
 - [x] **read and take notes from initial article**
   - [initial article](https://www.anthropic.com/research/global-workspace)
 - [ ] `**read and take notes from main paper**`
-  - [main paper](https://transformer-circuits.pub/2026/workspace/index.html?controls_id=ed90735a-968b-487a-b4f6-e2074c7a3143)`
+  - [main paper](https://transformer-circuits.pub/2026/workspace/index.html?controls_id=ed90735a-968b-487a-b4f6-e2074c7a3143)
 - [ ] **play with Jacobian Lens demo**
   - [Jacobian lens demo](https://www.neuronpedia.org/qwen3.6-27b/jlens?shareId=cmr1vpdne000kpt2x53dc7kqe)
 - [ ] **look at code for J-lens**
@@ -125,6 +129,7 @@ Model is ~aware of (can introspect about) what's active in their J-spaces and th
 - [ ] `QUESTION #5` How is **Claim #7** measured exactly?
 - [ ] `QUESTION #6`: Could you train a model organism (intentionally misaligned LLM) to occlude its J-space, i.e. tell it to "think about being honest, helpful and harmless" at all times?
 - [ ] `QUESTION #7` What is **counterfactual reflection training**? They claim they used it to train the model to light up J-space patterns for "honesty" and "integrity" and this lowered dishonesty scores.
+  - from main paper, they say it is a technique to improve behaviour by training the model on what it says if we interrupt it and ask it to reflect
  
 
 ## General Notes
@@ -182,9 +187,43 @@ Model is ~aware of (can introspect about) what's active in their J-spaces and th
   - Human consciounsess appears to be sustained by recurrent loops (signals cycling / coming in waves through the same circuits)
   - Claude's J-space is sustained within a single pass 
   - *"Network's depth plays the role that times plays in the brain"*
- 
----
+
+
 # AI-assisted Notes
+
+## Key Finding
+
+LLMs possess a **small, evolving set of unspoken words** in their internal representations that:
+- Are neither pure echoes of input nor predictions of the next token
+- Name concepts the model is currently reasoning with
+- Satisfy all five workspace-like properties below
+
+These representations are **verbalizable** (Property 1), which was used as the search criterion to identify them. The paper then demonstrates they unexpectedly satisfy Properties 2–5 as well.
+
+## Global Workspace Theory / Access Consciousness Properties
+
+### Original Framework (Human Cognition)
+
+| Property | Core Idea |
+|----------|-----------|
+| **1. Verbal Report** | Conscious content is reportable — we can say what's on our mind |
+| **2. Direct Modulation** | Conscious content is controllable — we can direct attention to specific things |
+| **3. Internal Reasoning** | Conscious content enables explicit step-by-step reasoning (chain of thought) |
+| **4. Flexible Generalization** | Conscious content is generalizable — usable by multiple cognitive processes |
+| **5. Selectivity** | Conscious content is selective — only a small subset of mental processes are consciously available |
+
+---
+
+### LLM Analog (Workspace-like Representations)
+
+| Property | Operational Definition in LLMs |
+|----------|-------------------------------|
+| **1. Verbal Report** | When asked what it's "thinking about", the model names concepts represented in workspace vectors. Swapping active workspace vectors changes its answer accordingly. |
+| **2. Directed Modulation** | When instructed to hold a concept in mind or perform mental calculations, the model can activate and compute with workspace vectors independent of outputs. Non-workspace information can be pulled in when task-required. |
+| **3. Internal Reasoning** | Workspace vectors represent intermediate computation values during multi-step inference or planning. Intervening on them redirects conclusions. |
+| **4. Flexible Generalization** | The same representation serves as valid input to many different downstream computations. A workspace vector lifted from one context is correctly operated on by functions in the new context. |
+| **5. Selectivity** | Workspace comprises a small subset of total representational content. Required for only a fraction of model behavior — not involved in routine processing (text parsing, grammatical fluency). |
+
 
 ## Core Finding
 
